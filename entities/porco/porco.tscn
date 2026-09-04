@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dbnplx152f27p"]
+
+[ext_resource type="Texture2D" uid="uid://b877p80e01efo" path="res://entities/porco/porco-pixel-art.png" id="1_faydb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5e2w8"]
+
+[node name="CharacterBody2D" type="RigidBody2D" unique_id=1746473704]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=139707761]
+position = Vector2(0, -3)
+texture = ExtResource("1_faydb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1921328720]
+scale = Vector2(1.25, 1.25)
+shape = SubResource("CircleShape2D_5e2w8")
