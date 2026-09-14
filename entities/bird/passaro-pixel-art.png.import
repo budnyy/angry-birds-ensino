@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b877p80e01efo"
-path="res://.godot/imported/porco-pixel-art.png-3c5cff232acc005ec881f9441308101e.ctex"
+uid="uid://cb0oqodtgwiis"
+path="res://.godot/imported/passaro-pixel-art.png-87cdc90d027d933dbb18fac46e4cf9ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/porco/porco-pixel-art.png"
-dest_files=["res://.godot/imported/porco-pixel-art.png-3c5cff232acc005ec881f9441308101e.ctex"]
+source_file="res://entities/bird/passaro-pixel-art.png"
+dest_files=["res://.godot/imported/passaro-pixel-art.png-87cdc90d027d933dbb18fac46e4cf9ff.ctex"]
 
 [params]
 

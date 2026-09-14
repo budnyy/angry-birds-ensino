@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://046hipkhvn2h"]
+
+[ext_resource type="Script" uid="uid://dlgv5refqhpef" path="res://slingshot.gd" id="1_xykh3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5e2w8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_schov"]
+radius = 5.0
+
+[node name="Slingshot" type="Node2D" unique_id=510922535]
+script = ExtResource("1_xykh3")
+
+[node name="AreaMax" type="Area2D" parent="." unique_id=1958489968]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMax" unique_id=508905969]
+shape = SubResource("CircleShape2D_5e2w8")
+
+[node name="AreaMin" type="Area2D" parent="." unique_id=474291863]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMin" unique_id=1967889216]
+shape = SubResource("CircleShape2D_schov")
+
+[node name="BirdPosition" type="Marker2D" parent="." unique_id=816195438]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1011662157]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbnplx152f27p"]
 
-[ext_resource type="Texture2D" uid="uid://b877p80e01efo" path="res://entities/porco/porco-pixel-art.png" id="1_faydb"]
+[ext_resource type="Texture2D" uid="uid://b877p80e01efo" path="res://entities/pig/porco-pixel-art.png" id="1_faydb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5e2w8"]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dfhav14mn1b3e"]
 
-[ext_resource type="Texture2D" uid="uid://cb0oqodtgwiis" path="res://entities/passaro/passaro-pixel-art.png" id="1_hmpoa"]
+[ext_resource type="Texture2D" uid="uid://cb0oqodtgwiis" path="res://entities/bird/passaro-pixel-art.png" id="1_dnx6o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5e2w8"]
 
@@ -8,7 +8,7 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1139339198]
 position = Vector2(-2, -2)
-texture = ExtResource("1_hmpoa")
+texture = ExtResource("1_dnx6o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=899982293]
 scale = Vector2(1.25, 1.25)
