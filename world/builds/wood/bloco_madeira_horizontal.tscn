@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://bctbdeouluak2"]
 
-[ext_resource type="Texture2D" uid="uid://bjify0ocv54g5" path="res://world/builds/wood/New Piskel.png" id="1_ri8r0"]
+[ext_resource type="Texture2D" uid="uid://degiac1g8oyr2" path="res://world/builds/wood/Teste2.png" id="1_ri8r0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_123ki"]
-size = Vector2(32, 63.5)
+size = Vector2(16.000002, 64)
 
 [node name="BlocoMadeiraHorizontal" type="RigidBody2D" unique_id=1437300026]
 rotation = 1.5707964
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2014729696]
 texture = ExtResource("1_ri8r0")
-hframes = 8
-vframes = 4
+hframes = 32
+vframes = 8
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1959398216]
+position = Vector2(-2.0861626e-07, 5.960465e-08)
 shape = SubResource("RectangleShape2D_123ki")

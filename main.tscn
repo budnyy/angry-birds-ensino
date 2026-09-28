@@ -1,33 +1,31 @@
 [gd_scene format=3 uid="uid://bwaniq3udsdc0"]
 
-[ext_resource type="Texture2D" uid="uid://degiac1g8oyr2" path="res://world/builds/wood/Teste2.png" id="1_ig7tw"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
-texture = ExtResource("1_ig7tw")
-0:0/size_in_atlas = Vector2i(2, 4)
-0:0/0 = 0
-2:0/size_in_atlas = Vector2i(2, 4)
-2:0/0 = 0
-4:0/size_in_atlas = Vector2i(4, 2)
-4:0/0 = 0
-4:2/size_in_atlas = Vector2i(4, 2)
-4:2/0 = 0
-8:0/size_in_atlas = Vector2i(2, 2)
-8:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_123ki"]
-tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_0xm2m")
+[ext_resource type="PackedScene" uid="uid://bctbdeouluak2" path="res://world/builds/wood/bloco_madeira_horizontal.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://5ped1prhl534" path="res://world/builds/wood/bloco_madeira_vertical.tscn" id="2_h2yge"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_123ki"]
 distance = -362.0
 
 [node name="Main" type="Node" unique_id=947225915]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1601819086]
-tile_set = SubResource("TileSet_123ki")
-
 [node name="Chao" type="StaticBody2D" parent="." unique_id=1581085901]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chao" unique_id=955819710]
 shape = SubResource("WorldBoundaryShape2D_123ki")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=323107746]
+
+[node name="BlocoMadeiraHorizontal" parent="Node2D" unique_id=1437300026 instance=ExtResource("1_0xm2m")]
+position = Vector2(400, 248)
+
+[node name="BlocoMadeiraHorizontal2" parent="Node2D" unique_id=1639715775 instance=ExtResource("1_0xm2m")]
+position = Vector2(344, 120)
+
+[node name="BlocoMadeiraHorizontal3" parent="Node2D" unique_id=1490310545 instance=ExtResource("1_0xm2m")]
+position = Vector2(456, 120)
+
+[node name="BlocoMadeiraVertical" parent="." unique_id=365972340 instance=ExtResource("2_h2yge")]
+position = Vector2(376, 288)
+
+[node name="BlocoMadeiraVertical2" parent="." unique_id=2131442004 instance=ExtResource("2_h2yge")]
+position = Vector2(424, 288)

@@ -3,18 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://degiac1g8oyr2" path="res://world/builds/wood/Teste2.png" id="1_a6i5s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_123ki"]
-size = Vector2(16, 63)
+size = Vector2(16, 64)
 
-[node name="BlocoMadeiraVerticalDireita" type="RigidBody2D" unique_id=1437300026]
+[node name="BlocoMadeiraVertical" type="RigidBody2D" unique_id=1437300026]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2014729696]
-position = Vector2(0, 0.5)
-scale = Vector2(1, 0.984375)
 texture = ExtResource("1_a6i5s")
 hframes = 32
 vframes = 8
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1959398216]
-position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_123ki")
