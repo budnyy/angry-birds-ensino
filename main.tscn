@@ -1,9 +1,31 @@
 [gd_scene format=3 uid="uid://bwaniq3udsdc0"]
 
+[ext_resource type="Texture2D" uid="uid://degiac1g8oyr2" path="res://world/builds/wood/Teste2.png" id="1_ig7tw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
+texture = ExtResource("1_ig7tw")
+0:0/size_in_atlas = Vector2i(2, 4)
+0:0/0 = 0
+2:0/size_in_atlas = Vector2i(2, 4)
+2:0/0 = 0
+4:0/size_in_atlas = Vector2i(4, 2)
+4:0/0 = 0
+4:2/size_in_atlas = Vector2i(4, 2)
+4:2/0 = 0
+8:0/size_in_atlas = Vector2i(2, 2)
+8:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_123ki"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_0xm2m")
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_123ki"]
 distance = -362.0
 
 [node name="Main" type="Node" unique_id=947225915]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1601819086]
+tile_set = SubResource("TileSet_123ki")
 
 [node name="Chao" type="StaticBody2D" parent="." unique_id=1581085901]
 
