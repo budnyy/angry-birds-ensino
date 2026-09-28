@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c38t7xx73j5v0"]
+
+[ext_resource type="Texture2D" uid="uid://bjify0ocv54g5" path="res://world/builds/wood/New Piskel.png" id="1_a6i5s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_123ki"]
+size = Vector2(32, 63)
+
+[node name="BlocoMadeiraVertical" type="RigidBody2D" unique_id=1437300026]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2014729696]
+position = Vector2(0, 0.5)
+scale = Vector2(1, 0.984375)
+texture = ExtResource("1_a6i5s")
+hframes = 8
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1959398216]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_123ki")

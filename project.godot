@@ -11,16 +11,20 @@ config_version=5
 [application]
 
 config/name="angry-birds-ensino"
-run/main_scene="uid://dfhav14mn1b3e"
+run/main_scene="uid://bwaniq3udsdc0"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=640
+window/size/viewport_height=360
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="angry-birds-ensino"
 
 [physics]
 

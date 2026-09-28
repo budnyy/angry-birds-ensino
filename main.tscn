@@ -1,3 +1,33 @@
-[gd_scene format=3 uid="uid://bwaniq3udsdc0"]
+[gd_scene format=4 uid="uid://bwaniq3udsdc0"]
+
+[ext_resource type="Texture2D" uid="uid://bjify0ocv54g5" path="res://world/builds/wood/New Piskel.png" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://23oeq1g4eur3" path="res://world/builds/wood/tile_map_layer.gd" id="2_h2yge"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
+texture = ExtResource("1_0xm2m")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(1, 2)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 16)
+1:0/size_in_atlas = Vector2i(2, 1)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(-16, 0)
+
+[sub_resource type="TileSet" id="TileSet_s3on5"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_1bvp3")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_123ki"]
+distance = -362.0
 
 [node name="Main" type="Node" unique_id=947225915]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1103666135]
+tile_map_data = PackedByteArray("AAAKAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAASAAoAAAAAAAAAAAAKAAgAAAABAAAAAAAMAAgAAAABAAAAAAAOAAgAAAABAAAAAAAQAAgAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_s3on5")
+script = ExtResource("2_h2yge")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=838855816]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=955819710]
+shape = SubResource("WorldBoundaryShape2D_123ki")
