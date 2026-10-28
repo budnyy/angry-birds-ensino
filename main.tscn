@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bctbdeouluak2" path="res://world/builds/wood/bloco_madeira_horizontal.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://5ped1prhl534" path="res://world/builds/wood/bloco_madeira_vertical.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://046hipkhvn2h" path="res://slingshot.tscn" id="3_h2yge"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_123ki"]
 distance = -362.0
@@ -24,8 +25,11 @@ position = Vector2(344, 120)
 [node name="BlocoMadeiraHorizontal3" parent="Node2D" unique_id=1490310545 instance=ExtResource("1_0xm2m")]
 position = Vector2(456, 120)
 
-[node name="BlocoMadeiraVertical" parent="." unique_id=365972340 instance=ExtResource("2_h2yge")]
+[node name="BlocoMadeiraVertical" parent="Node2D" unique_id=365972340 instance=ExtResource("2_h2yge")]
 position = Vector2(376, 288)
 
-[node name="BlocoMadeiraVertical2" parent="." unique_id=2131442004 instance=ExtResource("2_h2yge")]
+[node name="BlocoMadeiraVertical2" parent="Node2D" unique_id=2131442004 instance=ExtResource("2_h2yge")]
 position = Vector2(424, 288)
+
+[node name="Slingshot" parent="." unique_id=510922535 instance=ExtResource("3_h2yge")]
+position = Vector2(102, 296)

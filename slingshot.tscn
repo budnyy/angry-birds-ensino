@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://046hipkhvn2h"]
 
 [ext_resource type="Script" uid="uid://dlgv5refqhpef" path="res://slingshot.gd" id="1_xykh3"]
+[ext_resource type="PackedScene" uid="uid://dfhav14mn1b3e" path="res://entities/bird/bird.tscn" id="2_81g13"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5e2w8"]
 
@@ -9,6 +10,7 @@ radius = 5.0
 
 [node name="Slingshot" type="Node2D" unique_id=510922535]
 script = ExtResource("1_xykh3")
+birds_queue = Array[PackedScene]([ExtResource("2_81g13"), ExtResource("2_81g13"), ExtResource("2_81g13")])
 
 [node name="AreaMax" type="Area2D" parent="." unique_id=1958489968]
 
