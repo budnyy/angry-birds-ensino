@@ -2,26 +2,37 @@
 
 [ext_resource type="Script" uid="uid://dlgv5refqhpef" path="res://slingshot.gd" id="1_xykh3"]
 [ext_resource type="PackedScene" uid="uid://dfhav14mn1b3e" path="res://entities/bird/bird.tscn" id="2_81g13"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_5e2w8"]
+[ext_resource type="Texture2D" uid="uid://bd437vket316o" path="res://pngwing.com (1).png" id="3_axlma"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_schov"]
 radius = 5.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5e2w8"]
+
 [node name="Slingshot" type="Node2D" unique_id=510922535]
 script = ExtResource("1_xykh3")
 birds_queue = Array[PackedScene]([ExtResource("2_81g13"), ExtResource("2_81g13"), ExtResource("2_81g13")])
+
+[node name="CenterPoint" type="Marker2D" parent="." unique_id=816195438]
+
+[node name="GrabArea" type="Area2D" parent="." unique_id=474291863]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea" unique_id=1967889216]
+shape = SubResource("CircleShape2D_schov")
 
 [node name="AreaMax" type="Area2D" parent="." unique_id=1958489968]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMax" unique_id=508905969]
 shape = SubResource("CircleShape2D_5e2w8")
 
-[node name="AreaMin" type="Area2D" parent="." unique_id=474291863]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMin" unique_id=1967889216]
-shape = SubResource("CircleShape2D_schov")
-
-[node name="BirdPosition" type="Marker2D" parent="." unique_id=816195438]
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1011662157]
+position = Vector2(-2, 22)
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("3_axlma")
+
+[node name="FrontBand" type="Line2D" parent="." unique_id=1725094685]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 1.0
+
+[node name="BackBand" type="Line2D" parent="." unique_id=1807509153]
+points = PackedVector2Array(0, 0, 0, 0)

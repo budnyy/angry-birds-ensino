@@ -17,19 +17,31 @@ shape = SubResource("WorldBoundaryShape2D_123ki")
 [node name="Node2D" type="Node2D" parent="." unique_id=323107746]
 
 [node name="BlocoMadeiraHorizontal" parent="Node2D" unique_id=1437300026 instance=ExtResource("1_0xm2m")]
-position = Vector2(400, 248)
+position = Vector2(403, 287)
 
 [node name="BlocoMadeiraHorizontal2" parent="Node2D" unique_id=1639715775 instance=ExtResource("1_0xm2m")]
-position = Vector2(344, 120)
+position = Vector2(403, 207)
 
 [node name="BlocoMadeiraHorizontal3" parent="Node2D" unique_id=1490310545 instance=ExtResource("1_0xm2m")]
-position = Vector2(456, 120)
+position = Vector2(403, 127)
 
 [node name="BlocoMadeiraVertical" parent="Node2D" unique_id=365972340 instance=ExtResource("2_h2yge")]
-position = Vector2(376, 288)
+position = Vector2(379, 327)
 
 [node name="BlocoMadeiraVertical2" parent="Node2D" unique_id=2131442004 instance=ExtResource("2_h2yge")]
-position = Vector2(424, 288)
+position = Vector2(427, 327)
+
+[node name="BlocoMadeiraVertical3" parent="Node2D" unique_id=948506582 instance=ExtResource("2_h2yge")]
+position = Vector2(379, 247)
+
+[node name="BlocoMadeiraVertical4" parent="Node2D" unique_id=1789616690 instance=ExtResource("2_h2yge")]
+position = Vector2(427, 247)
+
+[node name="BlocoMadeiraVertical5" parent="Node2D" unique_id=1029426744 instance=ExtResource("2_h2yge")]
+position = Vector2(379, 167)
+
+[node name="BlocoMadeiraVertical7" parent="Node2D" unique_id=705964992 instance=ExtResource("2_h2yge")]
+position = Vector2(427, 167)
 
 [node name="Slingshot" parent="." unique_id=510922535 instance=ExtResource("3_h2yge")]
 position = Vector2(102, 296)
