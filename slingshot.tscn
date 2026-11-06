@@ -31,8 +31,11 @@ scale = Vector2(0.01, 0.01)
 texture = ExtResource("3_axlma")
 
 [node name="FrontBand" type="Line2D" parent="." unique_id=1725094685]
+top_level = true
 points = PackedVector2Array(0, 0, 0, 0)
-width = 1.0
+width = 5.0
 
 [node name="BackBand" type="Line2D" parent="." unique_id=1807509153]
+top_level = true
 points = PackedVector2Array(0, 0, 0, 0)
+width = 5.0

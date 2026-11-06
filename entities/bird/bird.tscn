@@ -1,12 +1,19 @@
 [gd_scene format=3 uid="uid://dfhav14mn1b3e"]
 
-[ext_resource type="Script" uid="uid://bmr5ehsqr6b88" path="res://entities/bird/bird.gd" id="1_b8wfj"]
+[ext_resource type="Script" path="res://entities/bird/bird.gd" id="1_b8wfj"]
 [ext_resource type="Texture2D" uid="uid://cb0oqodtgwiis" path="res://entities/bird/passaro-pixel-art.png" id="1_dnx6o"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_axlma"]
+friction = 0.5
+bounce = 0.3
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5e2w8"]
 
 [node name="Bird" type="RigidBody2D" unique_id=751835667]
+physics_material_override = SubResource("PhysicsMaterial_axlma")
 freeze = true
+contact_monitor = true
+max_contacts_reported = 5
 script = ExtResource("1_b8wfj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1139339198]

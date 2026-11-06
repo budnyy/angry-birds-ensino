@@ -80,12 +80,13 @@ func _state_shot() -> void:
 		# Ativa a física do pássaro e aplica o impulso
 		current_bird.freeze = false
 		current_bird.apply_central_impulse(impulse)
+		current_bird.is_launched = true
 		
 		# Desvincula o pássaro atual para não modificá-lo mais
 		current_bird = null
 		
 	# A transição de volta para o Reset vai depender do Event Bus (quando a câmera voltar)
-	# Por enquanto, não vamos forçar o Reset automático para não instanciar vários pássaros.
+	# Por enquanto, não forçar o Reset automático para não instanciar vários pássaros
 
 func _state_reset() -> void:
 	if birds_queue.size() > 0:

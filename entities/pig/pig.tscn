@@ -1,15 +1,19 @@
 [gd_scene format=3 uid="uid://dbnplx152f27p"]
 
 [ext_resource type="Texture2D" uid="uid://b877p80e01efo" path="res://entities/pig/porco-pixel-art.png" id="1_faydb"]
+[ext_resource type="Script" uid="uid://dlt6dl754n78t" path="res://entities/Script de dano/destroyable.gd" id="1_u4377"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5e2w8"]
 
-[node name="CharacterBody2D" type="RigidBody2D" unique_id=1746473704]
+[node name="Pig" type="RigidBody2D" unique_id=1746473704]
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_u4377")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=139707761]
 position = Vector2(0, -3)
 texture = ExtResource("1_faydb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1921328720]
-scale = Vector2(1.25, 1.25)
+scale = Vector2(1.15, 1.15)
 shape = SubResource("CircleShape2D_5e2w8")

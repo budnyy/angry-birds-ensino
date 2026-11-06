@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://bwaniq3udsdc0"]
 
-[ext_resource type="PackedScene" uid="uid://bctbdeouluak2" path="res://world/builds/wood/bloco_madeira_horizontal.tscn" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://5ped1prhl534" path="res://world/builds/wood/bloco_madeira_vertical.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://5ped1prhl534" path="res://world/builds/wood/bloco_madeira.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dbnplx152f27p" path="res://entities/pig/pig.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://046hipkhvn2h" path="res://slingshot.tscn" id="3_h2yge"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_123ki"]
 distance = -362.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y41jf"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mwi3w"]
+distance = -1.0
 
 [node name="Main" type="Node" unique_id=947225915]
 
@@ -14,34 +19,85 @@ distance = -362.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chao" unique_id=955819710]
 shape = SubResource("WorldBoundaryShape2D_123ki")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=323107746]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Chao" unique_id=1404768325]
+rotation = -3.1415927
+shape = SubResource("WorldBoundaryShape2D_y41jf")
 
-[node name="BlocoMadeiraHorizontal" parent="Node2D" unique_id=1437300026 instance=ExtResource("1_0xm2m")]
-position = Vector2(403, 287)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Chao" unique_id=1929863647]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_y41jf")
 
-[node name="BlocoMadeiraHorizontal2" parent="Node2D" unique_id=1639715775 instance=ExtResource("1_0xm2m")]
-position = Vector2(403, 207)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Chao" unique_id=1918453161]
+position = Vector2(640, 0)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_mwi3w")
 
-[node name="BlocoMadeiraHorizontal3" parent="Node2D" unique_id=1490310545 instance=ExtResource("1_0xm2m")]
-position = Vector2(403, 127)
+[node name="Blocos" type="Node2D" parent="." unique_id=323107746]
 
-[node name="BlocoMadeiraVertical" parent="Node2D" unique_id=365972340 instance=ExtResource("2_h2yge")]
-position = Vector2(379, 327)
+[node name="BlocoMadeira" parent="Blocos" unique_id=1437300026 instance=ExtResource("2_h2yge")]
+position = Vector2(360, 328)
 
-[node name="BlocoMadeiraVertical2" parent="Node2D" unique_id=2131442004 instance=ExtResource("2_h2yge")]
-position = Vector2(427, 327)
+[node name="BlocoMadeira2" parent="Blocos" unique_id=683992703 instance=ExtResource("2_h2yge")]
+position = Vector2(408, 328)
 
-[node name="BlocoMadeiraVertical3" parent="Node2D" unique_id=948506582 instance=ExtResource("2_h2yge")]
-position = Vector2(379, 247)
+[node name="BlocoMadeira3" parent="Blocos" unique_id=694288206 instance=ExtResource("2_h2yge")]
+position = Vector2(384, 288)
+rotation = 1.5707964
 
-[node name="BlocoMadeiraVertical4" parent="Node2D" unique_id=1789616690 instance=ExtResource("2_h2yge")]
-position = Vector2(427, 247)
+[node name="BlocoMadeira4" parent="Blocos" unique_id=1298321299 instance=ExtResource("2_h2yge")]
+position = Vector2(360, 248)
 
-[node name="BlocoMadeiraVertical5" parent="Node2D" unique_id=1029426744 instance=ExtResource("2_h2yge")]
-position = Vector2(379, 167)
+[node name="BlocoMadeira5" parent="Blocos" unique_id=1110503388 instance=ExtResource("2_h2yge")]
+position = Vector2(408, 248)
 
-[node name="BlocoMadeiraVertical7" parent="Node2D" unique_id=705964992 instance=ExtResource("2_h2yge")]
-position = Vector2(427, 167)
+[node name="BlocoMadeira6" parent="Blocos" unique_id=2066020637 instance=ExtResource("2_h2yge")]
+position = Vector2(384, 208)
+rotation = 1.5707964
+
+[node name="BlocoMadeira7" parent="Blocos" unique_id=378817310 instance=ExtResource("2_h2yge")]
+position = Vector2(360, 168)
+
+[node name="BlocoMadeira8" parent="Blocos" unique_id=1075076105 instance=ExtResource("2_h2yge")]
+position = Vector2(408, 168)
+
+[node name="BlocoMadeira9" parent="Blocos" unique_id=375714144 instance=ExtResource("2_h2yge")]
+position = Vector2(384, 128)
+rotation = 1.5707964
+
+[node name="BlocoMadeira10" parent="Blocos" unique_id=1226299929 instance=ExtResource("2_h2yge")]
+position = Vector2(465, 328)
+
+[node name="BlocoMadeira11" parent="Blocos" unique_id=383271581 instance=ExtResource("2_h2yge")]
+position = Vector2(513, 328)
+
+[node name="BlocoMadeira12" parent="Blocos" unique_id=1643555244 instance=ExtResource("2_h2yge")]
+position = Vector2(489, 288)
+rotation = 1.5707964
+
+[node name="BlocoMadeira13" parent="Blocos" unique_id=2088148270 instance=ExtResource("2_h2yge")]
+position = Vector2(465, 248)
+
+[node name="BlocoMadeira14" parent="Blocos" unique_id=135963240 instance=ExtResource("2_h2yge")]
+position = Vector2(513, 248)
+
+[node name="BlocoMadeira15" parent="Blocos" unique_id=1475117183 instance=ExtResource("2_h2yge")]
+position = Vector2(489, 208)
+rotation = 1.5707964
+
+[node name="BlocoMadeira16" parent="Blocos" unique_id=183179918 instance=ExtResource("2_h2yge")]
+position = Vector2(465, 168)
+
+[node name="BlocoMadeira17" parent="Blocos" unique_id=1591458271 instance=ExtResource("2_h2yge")]
+position = Vector2(513, 168)
+
+[node name="BlocoMadeira18" parent="Blocos" unique_id=1624749078 instance=ExtResource("2_h2yge")]
+position = Vector2(489, 128)
+rotation = 1.5707964
 
 [node name="Slingshot" parent="." unique_id=510922535 instance=ExtResource("3_h2yge")]
 position = Vector2(102, 296)
+
+[node name="Porcos" type="Node2D" parent="." unique_id=1037447537]
+
+[node name="Pig" parent="Porcos" unique_id=1746473704 instance=ExtResource("3_1bvp3")]
+position = Vector2(383, 108)
