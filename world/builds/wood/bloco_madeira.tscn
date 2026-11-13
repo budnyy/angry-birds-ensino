@@ -3,15 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://degiac1g8oyr2" path="res://world/builds/wood/Teste2.png" id="1_a6i5s"]
 [ext_resource type="Script" uid="uid://dlt6dl754n78t" path="res://entities/Script de dano/destroyable.gd" id="1_fwh1q"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b8wfj"]
+rough = true
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_123ki"]
 size = Vector2(16, 64)
 
 [node name="BlocoMadeira" type="RigidBody2D" unique_id=1437300026]
-mass = 1.5
+mass = 2.0
+physics_material_override = SubResource("PhysicsMaterial_b8wfj")
+sleeping = true
 contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("1_fwh1q")
-health = 300.0
+health = 2000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2014729696]
 texture = ExtResource("1_a6i5s")

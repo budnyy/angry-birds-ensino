@@ -7,14 +7,15 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node) -> void:
-	# Verifica se a colisão ocorreu entre dois corpos com física
 	if body is RigidBody2D:
-		# Pega a velocidade de quem bateu menos a velocidade do objeto ou inimigo
 		var relative_velocity = (body.linear_velocity - linear_velocity).length()
 		
-		# Ignora toques leves (como um bloco apenas apoiado no outro)
-		if relative_velocity > 100.0:
-			take_damage(relative_velocity)
+		# Força = Velocidade da batida * Massa do objeto que bateu
+		var impact_force = relative_velocity * body.mass
+		
+		# Limite para ignorar toques leves
+		if impact_force > 300.0:
+			take_damage(impact_force)
 
 func take_damage(amount: float) -> void:
 	health -= amount

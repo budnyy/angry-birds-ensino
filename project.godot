@@ -37,6 +37,9 @@ ui_touch={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+2d/sleep_threshold_linear=3.0
+2d/time_before_sleep=0.3
+2d/solver/solver_iterations=32
 
 [rendering]
 
